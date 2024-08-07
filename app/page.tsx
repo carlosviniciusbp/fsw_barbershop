@@ -8,7 +8,7 @@ import { Badge } from "./_components/ui/badge"
 import { Avatar } from "./_components/ui/avatar"
 import { AvatarImage } from "@radix-ui/react-avatar"
 import { db } from "./_lib/prisma"
-import BarberShopItem from "./_components/barbershop-item"
+import BarbershopItem from "./_components/barbershop-item"
 
 const Home = async () => {
   const barbershops = await db.barbershop.findMany({})
@@ -60,7 +60,7 @@ const Home = async () => {
         </h2>
         <div className="flex gap-4 overflow-auto [&::-webkit-scrollbar]:hidden">
           {barbershops.map((barbershop) => (
-            <BarberShopItem key={barbershop.id} barbershop={barbershop} />
+            <BarbershopItem key={barbershop.id} barbershop={barbershop} />
           ))}
         </div>
       </div>
