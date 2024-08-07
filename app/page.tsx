@@ -7,8 +7,12 @@ import { Card, CardContent } from "./_components/ui/card"
 import { Badge } from "./_components/ui/badge"
 import { Avatar } from "./_components/ui/avatar"
 import { AvatarImage } from "@radix-ui/react-avatar"
+import { db } from "./_lib/prisma"
+import BarberShopItem from "./_components/barbershop-item"
 
-export default function Home() {
+const Home = async () => {
+  const barbershops = await db.barbershop.findMany({})
+
   return (
     <div>
       <Header />
@@ -17,7 +21,7 @@ export default function Home() {
         <p>Segunda-feira, 05 de Agosto</p>
         <div className="mt-6 flex items-center gap-2">
           <Input placeholder="Buscar" />
-          <Button className="">
+          <Button>
             <SearchIcon />
           </Button>
         </div>
@@ -29,10 +33,13 @@ export default function Home() {
             className="rounded-xl object-cover"
           />
         </div>
-        <Card className="mt-6">
+        <h2 className="mb-3 mt-6 text-xs font-bold uppercase text-gray-400">
+          Agendamentos
+        </h2>
+        <Card>
           <CardContent className="flex justify-between p-0">
             <div className="flex flex-col gap-2 py-5 pl-5">
-              <Badge>Confirmado</Badge>
+              <Badge className="w-fit">Confirmado</Badge>
               <h3 className="font-bold">Corte de Cabelo</h3>
               <div className="flex items-center gap-2">
                 <Avatar className="h-6 w-6">
@@ -48,7 +55,17 @@ export default function Home() {
             </div>
           </CardContent>
         </Card>
+        <h2 className="mb-3 mt-6 text-xs font-bold uppercase text-gray-400">
+          Agendamentos
+        </h2>
+        <div className="flex gap-4 overflow-auto [&::-webkit-scrollbar]:hidden">
+          {barbershops.map((barbershop) => (
+            <BarberShopItem key={barbershop.id} barbershop={barbershop} />
+          ))}
+        </div>
       </div>
     </div>
   )
 }
+
+export default Home
