@@ -3,14 +3,14 @@ import Header from "../_components/header"
 import Search from "../_components/search"
 import { db } from "../_lib/prisma"
 
-interface BarbershopsPageProps {
+interface BarbershopPageProps {
   searchParams: {
     title?: string
     service?: string
   }
 }
 
-const BarbershopsPage = async ({ searchParams }: BarbershopsPageProps) => {
+const BarbershopPage = async ({ searchParams }: BarbershopPageProps) => {
   const barbershops = await db.barbershop.findMany({
     where: {
       OR: [
@@ -59,4 +59,4 @@ const BarbershopsPage = async ({ searchParams }: BarbershopsPageProps) => {
   )
 }
 
-export default BarbershopsPage
+export default BarbershopPage
