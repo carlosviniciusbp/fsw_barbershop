@@ -57,12 +57,26 @@ const SidebarSheet = () => {
             </Link>
           </Button>
         </SheetClose>
-        <Button className="justify-start gap-2" variant="ghost" asChild>
-          <Link href="/bookings">
-            <CalendarIcon size={18} />
-            Agendamentos
-          </Link>
-        </Button>
+        {data?.user ? (
+          <Button className="justify-start gap-2" variant="ghost" asChild>
+            <Link href="/bookings">
+              <CalendarIcon size={18} />
+              Agendamentos
+            </Link>
+          </Button>
+        ) : (
+          <Dialog>
+            <DialogTrigger asChild>
+              <Button className="justify-start gap-2" variant="ghost">
+                <CalendarIcon size={18} />
+                Agendamentos
+              </Button>
+            </DialogTrigger>
+            <DialogContent className="w-[90%]">
+              <SignInDialog />
+            </DialogContent>
+          </Dialog>
+        )}
       </div>
       <div className="flex flex-col gap-1 border-b border-solid py-5">
         {quickSearchOptions.map((option) => (
