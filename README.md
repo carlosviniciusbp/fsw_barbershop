@@ -29,9 +29,12 @@
 
 ```js
 ------------------------------------------------ FUNCIONALIDADES ------------------------------------------------
-É preciso:
+
+Para rodar o projeto em sua máquina, é preciso:
+
 -instalar todas dependências no seu código com npm install
 -rodar servidor com npm run dev
+
 
 CRUD -> O Projeto ESTÁ FAZENDO:
 
