@@ -7,7 +7,7 @@
 - **Next.js**
 - **Typescript**
 - **Node.js**
-- **Prisma.js**
+- **Prisma**
 - **PostgreSQL**
 - **TailwindCSS**
 
