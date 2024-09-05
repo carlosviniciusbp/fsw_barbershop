@@ -1,4 +1,4 @@
-## ----SISTEMA DE AGENDAMENTO PARA BARBEARIAS----
+## SISTEMA DE AGENDAMENTO PARA BARBEARIAS
 
 <h3> IMPORTANTE !! -> Aplicação em construção para telas maiores</h3>
 
