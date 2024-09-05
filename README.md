@@ -2,6 +2,7 @@
 
 <h3>No momento, a aplicação foi feita para mobile, em fase de construção para telas maiores</h3>
 
+
 ## Tecnologias Utilizadas:
 
 - **Next.js**
@@ -10,10 +11,13 @@
 - **Prisma**
 - **PostgreSQL**
 - **TailwindCSS**
+- **Shadcn.ui**
+
 
 ## Diagrama do Banco de Dados
 
 ![Diagrama do banco de dados](./docs/database-diagram.png)
+
 
 ## Deploy feito na Vercel
 
@@ -28,6 +32,7 @@
 -rodar servidor com npm run dev
 
 CRUD -> O Projeto ESTÁ FAZENDO:
+
 -Criação de barbearias;
 -Criação de serviços das barbearias;
 -Login de usuários com Google;
