@@ -1,6 +1,15 @@
 ## Diagrama do Banco de Dados
 ![Diagrama do banco de dados](./docs/database-diagram.png)
 
+## Tecnologias Utilizadas:
+- **Next.js**
+- **Typescript**
+- **Node.js**
+- **Prisma.js**
+- **PostgreSQL**
+- **TailwindCSS**
+
+
 ````js
 ----------------------------------- FULLSTACK ----------------------------------------
 É preciso:
@@ -14,9 +23,6 @@ CRUD -> O Projeto ESTÁ FAZENDO:
 -Criação de agendamentos pelos usuários logados;
 -Leitura de agendamentos do usuário;
 -Deleção de agendamentos.
-
-
-
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
