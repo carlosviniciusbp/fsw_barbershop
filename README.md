@@ -23,9 +23,7 @@
 
 ## Deploy feito na Vercel
 
-[Link do Projeto](https://fsw-barbershop-v2.vercel.app/)
 
-[Plataforma Vercel](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme)
 
 ```js
 ------------------------------------------------ FUNCIONALIDADES ------------------------------------------------
